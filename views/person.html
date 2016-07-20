@@ -1,0 +1,12 @@
+<a href="#" class="list-group-item">
+  <div class="list-group-item-text">
+    <h4>Name: {{ pers.id.name }}</h4>
+    <p>Birth Year: {{ pers.id.birth_year }} </p>
+    <p>Gender: {{ pers.id.gender }} </p>
+    <p>Associated Ships: <span ng-if="pers.ships.length == 0"> none </span></p>
+      <ul ng-repeat="ship in pers.ships">
+      <li> Name: {{ ship.name}} </li>
+      <li> Class: {{ ship.starship_class }} </li>
+    </ul>
+  </div>
+</a>

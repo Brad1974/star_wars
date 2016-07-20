@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></head>
+  </head>
+
+  <body>
+
+    <div ng-controller="StarWarsController as star">
+      <div class="container">
+
+        <div class="page-header text-center">
+          <h2>Star Wars Characters</h2>
+        </div>
+
+        <div ng-repeat="person in star.peopleArray | orderBy: 'name'">
+          <person-entry id="person"></person-entry>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/angular.js"></script>
+    <script src="js/app/app.js"></script>  <script src="js/app/services/DataService.js"></script>
+    <script src="js/app/services/DataService.js"></script>
+    <script src="js/app/controllers/StarWarsController.js"></script>
+    <script src="js/app/directives/personEntry.js"></script>
+
+  </body>
+</html>
